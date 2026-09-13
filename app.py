@@ -20,7 +20,7 @@ def tts():
     text = request.args.get("text", "")
     lang = request.args.get("lang", "ru")
     # < 1.0 — голос ниже и грубее ("ворчливый дед"), > 1.0 — выше и быстрее
-    pitch = float(request.args.get("pitch", 0.85))
+    pitch = float(request.args.get("pitch", 1.3))
     pitch = max(0.5, min(pitch, 1.5))  # защита от экстремальных значений
 
     if not text:
